@@ -12,7 +12,9 @@ Due: Tu 02/13/18 11:59 PM
   - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hw1.py (there is no need to edit this file)
-  - Usage: ./cv_hw1 -i image -k clusters -m grey
+  - Usage: 
+  
+            ./cv_hw1 -i image -k clusters -m grey
   
             python cv_hw1.py -i image -k clusters -m grey
   - Please make sure your code runs when you run the above command from prompt/terminal
@@ -28,7 +30,9 @@ Due: Tu 02/13/18 11:59 PM
   - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hw1.py (there is no need to edit this file)
-  - Usage: ./cv_hw1 -i image -k clusters -m rgb
+  - Usage: 
+  
+            ./cv_hw1 -i image -k clusters -m rgb
   
             python cv_hw1.py -i image -k clusters -m rgb
   - Please make sure your code runs when you run the above command from prompt/terminal
