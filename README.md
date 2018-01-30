@@ -54,6 +54,17 @@ Due: Tu 02/13/18 11:59 PM
 
 Four images are provided for testing: cirle, fruits, kenny and lemons
 OpenCV: You can use opencv functions to load, display images.
+
+Make sure your final submission is running on circleci. 
+The TA will use CircleCI output and your github code for grading. 
+TA will not be able to grade if the code does not run on circle CI.
+
+Common reasons for failure.
+
+Do not use any 3rd party libraries or functions
+Do not display images in your final submission. 
+Example, cv2.imshow(), cv2.waitkey(), cv2.NamedWindow will make the circle ci fail.
+
 PS. Files not to be changed: requirements.txt and .circleci directory 
 If you do not like the structure, you are welcome to change the over all code, under two stipulations:
 
