@@ -22,7 +22,7 @@ Due: Tu 02/13/18 11:59 PM
 (5 Pts.) Write code to perform segmentation on a color image using KMeans clustering
 
   - Starter code available in directory Segmentation/
-  - Segmentation/KMeans.py: One is required to edit the functions "segmentation_color". You are welcome to add more function or add nested functions with in the function.
+  - Segmentation/KMeans.py: One is required to edit the functions "segmentation_rgb". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns the segmented image
   - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries
   - Describe your method and findings in your report
