@@ -39,8 +39,8 @@ Due: Tu 02/13/18 11:59 PM
   - Any output images or files must be saved to "output/" folder (cv_hw1.py automatically does this)
 
 -------------
-3. (2 Pts.) Describe your method and report you findings in your report for each problem of the assignemnt.
-  - In your report decribe the following points
+3. (5 Pts.) Describe your method and report you findings in your report for each of the implementations (greyscale and color) in assignemnt.
+  - In your report also decribe the following points
   
     a. What are the parameters that influence your algorithm? Explain their effect?
     
