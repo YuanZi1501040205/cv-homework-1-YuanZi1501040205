@@ -9,10 +9,13 @@ Due: Tu 02/13/18 11:59 PM
   - Starter code available in directory Segmentation/
   - Segmentation/KMeans.py: One is required to edit the functions "segmentation_grey". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns the segmented image
-  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries
+  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hw1.py (there is no need to edit this file)
-  - Usage: ./cv_hw1 -i image -k clusters -m grey
+  - Usage: 
+  
+            ./cv_hw1 -i image -k clusters -m grey
+  
             python cv_hw1.py -i image -k clusters -m grey
   - Please make sure your code runs when you run the above command from prompt/terminal
   - Any output images or files must be saved to "output/" folder (cv_hw1.py automatically does this)
@@ -22,12 +25,15 @@ Due: Tu 02/13/18 11:59 PM
 (5 Pts.) Write code to perform segmentation on a color image using KMeans clustering
 
   - Starter code available in directory Segmentation/
-  - Segmentation/KMeans.py: One is required to edit the functions "segmentation_color". You are welcome to add more function or add nested functions with in the function.
+  - Segmentation/KMeans.py: One is required to edit the functions "segmentation_rgb". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns the segmented image
-  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries
+  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hw1.py (there is no need to edit this file)
-  - Usage: ./cv_hw1 -i image -k clusters -m rgb
+  - Usage: 
+  
+            ./cv_hw1 -i image -k clusters -m rgb
+  
             python cv_hw1.py -i image -k clusters -m rgb
   - Please make sure your code runs when you run the above command from prompt/terminal
   - Any output images or files must be saved to "output/" folder (cv_hw1.py automatically does this)
@@ -41,6 +47,7 @@ Due: Tu 02/13/18 11:59 PM
 -------------
 
 Four images are provided for testing: cirle, fruits, kenny and lemons
+OpenCV: You can use opencv functions to load, display images.
 PS. Files not to be changed: requirements.txt and .circleci directory 
 If you do not like the structure, you are welcome to change the over all code, under two stipulations:
 
