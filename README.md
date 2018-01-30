@@ -41,9 +41,13 @@ Due: Tu 02/13/18 11:59 PM
 -------------
 3. (2 Pts.) Describe your method and report you findings in your report for each problem of the assignemnt.
   - In your report decribe the following points
-    a. What are the parameters that influence your algorithm? Explain their effect
+  
+    a. What are the parameters that influence your algorithm? Explain their effect?
+    
     b. Does your segementation code always generate the same segments for a given k. Explain?
-    c. What is the objective of this implementations? Which set of features perform better (color vs greyscale)? Explain
+    
+    c. What is the objective of this implementations? Which set of features perform better (color vs greyscale)? Explain?
+    
 -------------
 
 Four images are provided for testing: cirle, fruits, kenny and lemons
