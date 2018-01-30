@@ -40,6 +40,8 @@ Due: Tu 02/13/18 11:59 PM
 
 -------------
 3. (5 Pts.) Describe your method and report you findings in your report for each of the implementations (greyscale and color) in assignemnt.
+  - Your report should accompany your code. 
+  - Include a word/pdf file in the repository.
   - In your report also decribe the following points
   
     a. What are the parameters that influence your algorithm? Explain their effect?
