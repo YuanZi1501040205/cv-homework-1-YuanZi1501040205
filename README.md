@@ -61,7 +61,7 @@ TA will not be able to grade if the code does not run on circle CI.
 
 Common reasons for failure.
 
-Do not use any 3rd party libraries or functions
+Do not use any 3rd party libraries or functions.
 Do not display images in your final submission. 
 Example, cv2.imshow(), cv2.waitkey(), cv2.NamedWindow will make the circle ci fail.
 
