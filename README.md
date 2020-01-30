@@ -87,7 +87,7 @@ If you do not like the structure, you are welcome to change the over all code, u
 The TA will only be able to see your results if these two conditions are met
 
 1. Kmeans grey     - 5 Pts.
-2. Kmenas color    - 5 Pts.
+2. Kmeans color    - 5 Pts.
 3. Report          - 5 Pts
 
     Total          - 15 Pts.
