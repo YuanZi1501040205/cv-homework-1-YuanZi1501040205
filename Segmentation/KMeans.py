@@ -88,11 +88,11 @@ class KmeansSegmentation:
         plt.plot(list(range(updateI)), J)
         path = os.getcwd()# get current path
         output_path = path + '/output/'
-        plt.savefig(output_path + "GRAY_Loss for K="+str(k)+" " + image_name +'.jpg')
+        plt.savefig(output_path + "GRAY_Loss for K="+str(k)+" " + image_name +'.png')
         for i in range(k):
             for [index,coordinates] in enumerate(clusters[i]):
                 image[coordinates[0], coordinates[1]] = centroids[i]
-        cv2.imwrite(output_path+str(k)+'_GRAY_After_Segmentation_'+image_name+'.jpg', image)
+        cv2.imwrite(output_path+str(k)+'_GRAY_After_Segmentation_'+image_name+'.png', image)
         return image
 
 # segmentation_rgb(self = True, image = image_path, k = 2)
@@ -186,9 +186,9 @@ class KmeansSegmentation:
         plt.plot(list(range(updateI)), J)
         path = os.getcwd()# get current path
         output_path = path + '/output/'
-        plt.savefig(output_path + "RGB Loss for K=" + str(k) + " " + image_name + ".jpg")
+        plt.savefig(output_path + "RGB Loss for K=" + str(k) + " " + image_name + ".png")
         for i in range(k):
             for [index, coordinates] in enumerate(clusters[i]):
                 image[coordinates[0], coordinates[1]] = centroids[i]
-        cv2.imwrite(output_path + str(k) + 'RGB__After_Segmentation_' + image_name + ".jpg", image)
+        cv2.imwrite(output_path + str(k) + 'RGB__After_Segmentation_' + image_name + ".png", image)
         return image
