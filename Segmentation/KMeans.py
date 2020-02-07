@@ -32,17 +32,24 @@ class KmeansSegmentation:
         while 1:
             #forms K clusters:assign each pixel to the closest centroid; proximity: pixel_intensity minus centroids' intensity
             Jsum_inside_clusters = np.zeros(k)
-            for m in range(height):
-                for n in range(width):
-                    DistanceToCentroids = []
-                    for i in range(k):
-                        DistanceToCentroids.append(abs(image[m, n]-centroids[i]))
-                    for i in range(k):
-                        if DistanceToCentroids.index(min(DistanceToCentroids)) == i:
-                            clusters[i].append([m, n])
-                            Jsum_inside_clusters[i] = Jsum_inside_clusters[i] + DistanceToCentroids[i]
-                        else:
-                            pass
+            flag = 1
+            while flag:
+                for m in range(height):
+                    for n in range(width):
+                        DistanceToCentroids = []
+                        for i in range(k):
+                            DistanceToCentroids.append(abs(image[m, n]-centroids[i]))
+                        for i in range(k):
+                            if DistanceToCentroids.index(min(DistanceToCentroids)) == i:
+                                clusters[i].append([m, n])
+                                Jsum_inside_clusters[i] = Jsum_inside_clusters[i] + DistanceToCentroids[i]
+                            else:
+                                pass
+                        for i in range(k):
+                            if len(clusters[i]) == 0:
+                                flag = 1
+                            else:
+                                flag = 0
             Jsum_all_clusters_old = sum(Jsum_inside_clusters)
             #update centroids
             clusters_intensity_sum = []
@@ -121,19 +128,26 @@ class KmeansSegmentation:
         updateI = 0
         J = []
         while 1:
-            # forms K clusters:assign each pixel to the closest centroid; proximity: pixel_intensity minus centroids' intensity
-            Jsum_inside_clusters = np.zeros(k)
-            for m in range(height):
-                for n in range(width):
-                    DistanceToCentroids = []
+            flag = 1
+            while flag:
+                # forms K clusters:assign each pixel to the closest centroid; proximity: pixel_intensity minus centroids' intensity
+                Jsum_inside_clusters = np.zeros(k)
+                for m in range(height):
+                    for n in range(width):
+                        DistanceToCentroids = []
+                        for i in range(k):
+                            DistanceToCentroids.append(np.sqrt(int(image[m, n, 0] - centroids[i][0])**2 + int(image[m, n, 1] - centroids[i][1])**2 +int(image[m, n, 2] - centroids[i][2])**2))
+                        for i in range(k):
+                            if DistanceToCentroids.index(min(DistanceToCentroids)) == i:
+                                clusters[i].append([m, n])
+                                Jsum_inside_clusters[i] = Jsum_inside_clusters[i] + DistanceToCentroids[i]
+                            else:
+                                pass
                     for i in range(k):
-                        DistanceToCentroids.append(np.sqrt(int(image[m, n, 0] - centroids[i][0])**2 + int(image[m, n, 1] - centroids[i][1])**2 +int(image[m, n, 2] - centroids[i][2])**2))
-                    for i in range(k):
-                        if DistanceToCentroids.index(min(DistanceToCentroids)) == i:
-                            clusters[i].append([m, n])
-                            Jsum_inside_clusters[i] = Jsum_inside_clusters[i] + DistanceToCentroids[i]
+                        if len(clusters[i]) == 0:
+                            flag = 1
                         else:
-                            pass
+                            flag = 0
             Jsum_all_clusters_old = sum(Jsum_inside_clusters)
             # update centroids
             clusters_intensity_sum = []
