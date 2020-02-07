@@ -45,11 +45,11 @@ class KmeansSegmentation:
                                 Jsum_inside_clusters[i] = Jsum_inside_clusters[i] + DistanceToCentroids[i]
                             else:
                                 pass
-                        for i in range(k):
-                            if len(clusters[i]) == 0:
-                                flag = 1
-                            else:
-                                flag = 0
+                    for i in range(k):
+                        if len(clusters[i]) == 0:
+                            flag = 1
+                        else:
+                            flag = 0
             Jsum_all_clusters_old = sum(Jsum_inside_clusters)
             #update centroids
             clusters_intensity_sum = []
@@ -143,11 +143,11 @@ class KmeansSegmentation:
                                 Jsum_inside_clusters[i] = Jsum_inside_clusters[i] + DistanceToCentroids[i]
                             else:
                                 pass
-                    for i in range(k):
-                        if len(clusters[i]) == 0:
-                            flag = 1
-                        else:
-                            flag = 0
+                for i in range(k):
+                    if len(clusters[i]) == 0:
+                        flag = 1
+                    else:
+                        flag = 0
             Jsum_all_clusters_old = sum(Jsum_inside_clusters)
             # update centroids
             clusters_intensity_sum = []
