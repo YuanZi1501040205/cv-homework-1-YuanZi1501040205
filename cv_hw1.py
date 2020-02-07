@@ -12,14 +12,68 @@ import cv2
 import sys
 from Segmentation.KMeans import KmeansSegmentation
 from datetime import datetime
-
-def display_image(window_name, image):
-    """A function to display image
-    Note: only for debuggging do not use for submission, Circle CI will fail"""
-    cv2.namedWindow(window_name)
-    cv2.imshow(window_name, image)
-    cv2.waitKey(0)
-
+##%%
+# display_image("image","fruits.jpg")
+# # %%
+# def IMGstatistics(image_path, color, output_path):
+#     import matplotlib.pyplot as plt
+#     if color == 'GRAY':
+#         hist = np.zeros([256], dtype = np.int32)
+#         image = cv2.imread(image_path, 0)
+#         height, width = image.shape[0], image.shape[1]
+#         if image is None:
+#             print("image reading failure, please check image's path!")
+#             exit()
+#         for row in range(height):
+#             for col in range(width):
+#                 pv = image[row, col]
+#                 hist[pv] +=1
+#         plt.figure()
+#         plt.title(image_path + " Gray Histogram")
+#         plt.xlabel("intensity")
+#         plt.ylabel("number of pixels")
+#         # plt.hist(hist, bins=8000, density = 'TRUE', facecolor = 'green', alpha = 0.5)
+#         plt.plot(hist, color="r")
+#         plt.xlim([0,256])
+#         plt.savefig(output_path + "GRAY_statictics_" + image_path)
+#         plt.show()
+#     elif color == 'RGB':
+#         image = cv2.imread(image_path)
+#         height, width = image.shape[0], image.shape[1]
+#         if image is None:
+#             print("image reading failure, please check image's path!")
+#             exit()
+#         histb = np.zeros([256], dtype = np.int32)
+#         histg = np.zeros([256], dtype = np.int32)
+#         histr = np.zeros([256], dtype = np.int32)
+#         for row in range(height):
+#             for col in range(width):
+#                 pvb = image[row, col, 0]
+#                 histb[pvb] +=1
+#                 pvg = image[row, col, 1]
+#                 histg[pvg] += 1
+#                 pvr = image[row, col, 2]
+#                 histr[pvr] += 1
+#         plt.figure()
+#         plt.title(image_path + " RGB Histogram")
+#         plt.xlabel("intensity")
+#         plt.ylabel("number of pixels")
+#         plt.plot(histb, color = 'b')
+#         plt.plot(histg, color = 'g')
+#         plt.plot(histr, color = 'r')
+#         plt.xlim([0,256])
+#         plt.savefig(output_path + "RGB_statictics_" + image_path)
+#         plt.show()
+#     else :
+#         print("input type error!")
+#         pass
+# # %%
+# image_path = 'circles.jpg'
+# color = 'RGB'
+# output_path = '/home/cougarnet.uh.edu/yzi2/Pictures/'
+# IMGstatistics(image_path, color, output_path)
+#
+# # %%
 def main():
     """ The main funtion that parses input arguments, calls the approrpiate
      kmeans method and writes the output image"""
@@ -72,15 +126,15 @@ def main():
     output = None
     if model == 'grey':
         input_image = cv2.cvtColor(input_image, cv2.COLOR_RGB2GRAY)
-        output = Segementation_object.segmentation_grey(input_image, clusters)
+        output = Segementation_object.segmentation_grey(input_image, clusters, image_name)
     else:
-        output = Segementation_object.segmentation_rgb(input_image, clusters)
+        output = Segementation_object.segmentation_rgb(input_image, clusters, image_name)
 
 
     #Write output file
-    output_dir = 'output/'
-    output_image_name = output_dir+image_name+"_"+model+"_"+str(clusters)+"_"+datetime.now().strftime("%m%d-%H%M%S")+".jpg"
-    cv2.imwrite(output_image_name, output)
+    # output_dir = 'output/'
+    # output_image_name = output_dir+image_name+"_"+model+"_"+str(clusters)+"_"+datetime.now().strftime("%m%d-%H%M%S")+".jpg"
+    # cv2.imwrite(output_image_name, output)
 
 
 if __name__ == "__main__":
