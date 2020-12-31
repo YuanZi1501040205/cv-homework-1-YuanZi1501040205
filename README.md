@@ -1,6 +1,11 @@
 # Computer Vision - Segmentation
 Homework #1 
-<img src="https://github.com/YuanZi1501040205/cv-homework-1-YuanZi1501040205/blob/master/output/3RGB__After_Segmentation_fruits.jpg" width="250">
+| results example 1      | results example 2      |
+|------------|-------------|
+| <img src="https://github.com/YuanZi1501040205/cv-homework-1-YuanZi1501040205/blob/master/output/3RGB__After_Segmentation_fruits.jpg" width="250"> |  <img src="https://github.com/YuanZi1501040205/cv-homework-1-YuanZi1501040205/blob/master/output/5RGB__After_Segmentation_kenny.jpg" width="250"> |
+
+
+
 
 Due: Tu 02/09/20 11:59 PM
 
